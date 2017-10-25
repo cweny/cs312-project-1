@@ -376,8 +376,8 @@ compute_board_values([B|Boards],S,Depth,[MList|MListRest],[V|Vals]) :-
 	compute_board_values(Boards, S, Depth, MListRest, Vals).
 
 
-% Get board value. Number of black pieces and number of white pieces.
-% board_value(Board,R) is true if R is number of discs on the board Board.
+% Get board value. Number of black pieces minus number of white pieces.
+% board_value(Board,R) is true if R is number of black discs minus number of white discs on the board Board.
 board_value([], 0).
 board_value([[]|Board], R) :-
 	board_value(Board, R).
